@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projeto 2 Toke - Escolinha de Futebol</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f0f8ff;
+      color: #333;
+    }
+
+    header {
+      background-color: #007BFF;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header img {
+      width: 120px;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      background-color: #0056b3;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      padding: 15px 20px;
+      text-decoration: none;
+      display: inline-block;
+      white-space: nowrap;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #003f7f;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    input, textarea, button {
+      display: block;
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    footer {
+      background-color: #0056b3;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .contact-info {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 1.1rem;
+    }
+
+    /* Mensagem destacada para inscrições abertas */
+    .inscricoes-abertas {
+      background-color: #28a745;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Botões fixos Instagram e WhatsApp */
+    .fixed-buttons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      z-index: 1000;
+    }
+
+    .btn-contact {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      color: white;
+      font-size: 24px;
+      text-decoration: none;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-whatsapp {
+      background-color: #25D366;
+    }
+
+    .btn-whatsapp:hover {
+      background-color: #1ebe57;
+    }
+
+    .btn-instagram {
+      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    }
+
+    .btn-instagram:hover {
+      opacity: 0.8;
+    }
+
+    /* ===== Responsividade ===== */
+    @media (max-width: 768px) {
+      nav {
+        justify-content: center;
+      }
+
+      nav a {
+        padding: 12px 15px;
+        font-size: 1rem;
+      }
+
+      form {
+        max-width: 90%;
+        padding: 15px;
+      }
+
+      .inscricoes-abertas {
+        font-size: 1rem;
+        padding: 12px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header img {
+        width: 90px;
+      }
+
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      nav a {
+        padding: 15px;
+        border-bottom: 1px solid #004080;
+        text-align: center;
+        font-size: 1.1rem;
+      }
+
+      nav a:last-child {
+        border-bottom: none;
+      }
+
+      main {
+        padding: 15px 10px;
+      }
+
+      form {
+        max-width: 100%;
+        padding: 15px;
+        box-shadow: none;
+      }
+
+      input, textarea, button {
+        font-size: 1.1rem;
+        padding: 12px;
+      }
+
+      footer {
+        font-size: 1rem;
+        padding: 15px 10px;
+      }
+
+      .inscricoes-abertas {
+        font-size: 1rem;
+        padding: 12px;
+      }
+    }
+  </style>
+
+  <!-- Ícones Font Awesome CDN para WhatsApp e Instagram -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+  <header>
+    <img src="logo.png" alt="Logo Projeto 2 Toke" />
+    <h1>Escolinha de Futebol - Projeto 2 Toke</h1>
+    <p><em>Nunca diga eu não posso</em></p>
+  </header>
+
+  <!-- Mensagem destacada sobre inscrições abertas -->
+  <div class="inscricoes-abertas">
+    Inscrições abertas! Escolinha Projeto 2 Toke para crianças de 5 a 12 anos.<br/>
+    Contato: (84) 98731-0194
+  </div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#sobre">Sobre Mim</a>
+    <a href="#contato">Contato</a>
+    <a href="#formulario">Formulário</a>
+  </nav>
+
+  <main>
+    <section id="home" class="section">
+      <h2>Bem-vindo à Escolinha de Futebol</h2>
+      <p>Nosso projeto visa desenvolver o esporte e a disciplina em crianças de 5 a 12 anos, promovendo saúde, socialização e valores através do futebol.</p>
+    </section>
+
+    <section id="sobre" class="section">
+      <h2>Sobre Mim</h2>
+      <p>Sou o Professor Lourival, apaixonado por esportes e dedicado ao desenvolvimento das crianças por meio do futebol. Com anos de experiência, tenho orgulho de liderar o Projeto 2 Toke.</p>
+    </section>
+
+    <section id="contato" class="section">
+      <h2>Contato</h2>
+      <div class="contact-info">
+        <p>📞 Telefone: (84) 9 8731-0194</p>
+        <p>📧 Email: <a href="mailto:projeto2toke@gmail.com">projeto2toke@gmail.com</a></p>
+        <p>Instagram: <a href="https://www.instagram.com/projeto2toke2" target="_blank" rel="noopener noreferrer">@projeto2toke2</a></p>
+      </div>
+    </section>
+
+    <section id="formulario" class="section">
+      <h2>Formulário de Inscrição</h2>
+      <form action="mailto:projeto2toke@gmail.com" method="POST" enctype="text/plain">
+        <label for="nome">Nome do Responsável:</label>
+        <input type="text" id="nome" name="Nome do Responsável" required />
+
+        <label for="nome-crianca">Nome da Criança:</label>
+        <input type="text" id="nome-crianca" name="Nome da Criança" required />
+
+        <label for="idade">Idade da Criança:</label>
+        <input type="number" id="idade" name="Idade" required min="5" max="12"/>
+
+        <label for="telefone">Telefone de Contato:</label>
+        <input type="tel" id="telefone" name="Telefone" required />
+
+        <label for="mensagem">Mensagem (opcional):</label>
+        <textarea id="mensagem" name="Mensagem"></textarea>
+
+        <button type="submit">Enviar Inscrição</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Projeto 2 Toke | Desenvolvido por Professor Lourival</p>
+    <p>Contato: (84) 98731-0194</p>
+  </footer>
+
+  <!-- Botões fixos para WhatsApp e Instagram -->
+  <div class="fixed-buttons">
+    <a href="https://wa.me/5584987310194" target="_blank" rel="noopener noreferrer" class="btn-contact btn-whatsapp" aria-label="WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="https://www.instagram.com/projeto2toke2" target="_blank" rel="noopener noreferrer" class="btn-contact btn-instagram" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>
+
+</body>
+</html>
