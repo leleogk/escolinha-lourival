@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Escolinha do Professor Lourival</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #e6f0ff;
+      color: #003366;
+    }
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #0055aa;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 30px;
+      max-width: 800px;
+      margin: auto;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #003366;
+      color: white;
+    }
+    form input, form textarea, form button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    form button {
+      background-color: #0055aa;
+      color: white;
+      border: none;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Escolinha do Professor Lourival</h1>
+  </header>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#sobre">Sobre Mim</a>
+    <a href="#contato">Contato</a>
+    <a href="#formulario">Formulário</a>
+  </nav>
+
+  <section id="home">
+    <h2>Bem-vindo à Escolinha!</h2>
+    <p>Aprenda com diversão e responsabilidade. Aqui, o aprendizado é leve, mas o conhecimento é profundo!</p>
+    <img src="https://via.placeholder.com/800x300/0055aa/ffffff?text=Escolinha+do+Professor+Lourival" alt="Banner Azul" />
+  </section>
+
+  <section id="sobre">
+    <h2>Sobre Mim</h2>
+    <p>Sou o Professor Lourival, apaixonado por ensinar e transformar o aprendizado em uma jornada divertida e significativa. Trabalho com alunos de diversas idades e tenho como missão facilitar o entendimento dos conteúdos com métodos criativos e eficazes.</p>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <p>Entre em contato pelo e-mail: <strong>professorlourival@escolinha.com</strong></p>
+    <p>Ou pelo WhatsApp: <strong>(00) 91234-5678</strong></p>
+  </section>
+
+  <section id="formulario">
+    <h2>Formulário de Recrutamento</h2>
+    <form action="mailto:professorlourival@escolinha.com" method="post" enctype="text/plain">
+      <label>Nome:</label>
+      <input type="text" name="Nome" required />
+      <label>Idade:</label>
+      <input type="number" name="Idade" required />
+      <label>Por que quer fazer parte da escolinha?</label>
+      <textarea name="Motivo" rows="4" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Escolinha do Professor Lourival. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
