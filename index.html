@@ -2,108 +2,177 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Escolinha do Professor Lourival</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projeto 2 Toke - Escolinha de Futebol</title>
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #e6f0ff;
-      color: #003366;
+      margin: 0;
+      background-color: #f0f8ff;
+      color: #333;
     }
+
     header {
-      background-color: #003366;
+      background-color: #007BFF;
       color: white;
       padding: 20px;
       text-align: center;
     }
+
+    header img {
+      width: 120px;
+      margin-bottom: 10px;
+    }
+
     nav {
-      background-color: #0055aa;
+      background-color: #0056b3;
       display: flex;
       justify-content: center;
-      gap: 30px;
-      padding: 10px;
+      flex-wrap: wrap; /* Permite que os itens quebrem linha */
     }
+
     nav a {
       color: white;
+      padding: 15px 20px;
       text-decoration: none;
-      font-weight: bold;
+      display: inline-block;
+      white-space: nowrap; /* Evita quebra dentro do texto */
+      transition: background-color 0.3s ease;
     }
+
     nav a:hover {
-      text-decoration: underline;
+      background-color: #003f7f;
     }
-    section {
-      padding: 30px;
-      max-width: 800px;
+
+    main {
+      padding: 20px;
+      max-width: 900px;
       margin: auto;
     }
-    footer {
-      text-align: center;
-      padding: 15px;
-      background-color: #003366;
-      color: white;
+
+    .section {
+      margin-bottom: 40px;
     }
-    form input, form textarea, form button {
+
+    form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    input, textarea, button {
+      display: block;
       width: 100%;
+      margin-bottom: 15px;
       padding: 10px;
-      margin-top: 10px;
+      border-radius: 4px;
       border: 1px solid #ccc;
-      border-radius: 5px;
+      font-size: 1rem;
+      box-sizing: border-box;
     }
-    form button {
-      background-color: #0055aa;
+
+    button {
+      background-color: #007BFF;
       color: white;
       border: none;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
     }
-    img {
-      max-width: 100%;
-      border-radius: 10px;
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    footer {
+      background-color: #0056b3;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .contact-info {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 1.1rem;
+    }
+
+    /* ===== Responsividade ===== */
+
+    /* Para telas até 768px (tablets e celulares em modo paisagem) */
+    @media (max-width: 768px) {
+      nav {
+        justify-content: center;
+      }
+
+      nav a {
+        padding: 12px 15px;
+        font-size: 1rem;
+      }
+
+      form {
+        max-width: 90%;
+        padding: 15px;
+      }
+    }
+
+    /* Para telas até 480px (celulares em modo retrato) */
+    @media (max-width: 480px) {
+      header img {
+        width: 90px;
+      }
+
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      nav a {
+        padding: 15px;
+        border-bottom: 1px solid #004080;
+        text-align: center;
+        font-size: 1.1rem;
+      }
+
+      nav a:last-child {
+        border-bottom: none;
+      }
+
+      main {
+        padding: 15px 10px;
+      }
+
+      form {
+        max-width: 100%;
+        padding: 15px;
+        box-shadow: none;
+      }
+
+      input, textarea, button {
+        font-size: 1.1rem;
+        padding: 12px;
+      }
+
+      footer {
+        font-size: 1rem;
+        padding: 15px 10px;
+      }
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>Escolinha do Professor Lourival</h1>
-  </header>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#sobre">Sobre Mim</a>
-    <a href="#contato">Contato</a>
-    <a href="#formulario">Formulário</a>
-  </nav>
-
-  <section id="home">
-    <h2>Bem-vindo à Escolinha!</h2>
-    <p>Aprenda com diversão e responsabilidade. Aqui, o aprendizado é leve, mas o conhecimento é profundo!</p>
-    <img src="https://via.placeholder.com/800x300/0055aa/ffffff?text=Escolinha+do+Professor+Lourival" alt="Banner Azul" />
-  </section>
-
-  <section id="sobre">
-    <h2>Sobre Mim</h2>
-    <p>Sou o Professor Lourival, apaixonado por ensinar e transformar o aprendizado em uma jornada divertida e significativa. Trabalho com alunos de diversas idades e tenho como missão facilitar o entendimento dos conteúdos com métodos criativos e eficazes.</p>
-  </section>
-
-  <section id="contato">
-    <h2>Contato</h2>
-    <p>Entre em contato pelo e-mail: <strong>professorlourival@escolinha.com</strong></p>
-    <p>Ou pelo WhatsApp: <strong>(00) 91234-5678</strong></p>
-  </section>
-
-  <section id="formulario">
-    <h2>Formulário de Recrutamento</h2>
-    <form action="mailto:professorlourival@escolinha.com" method="post" enctype="text/plain">
-      <label>Nome:</label>
-      <input type="text" name="Nome" required />
-      <label>Idade:</label>
-      <input type="number" name="Idade" required />
-      <label>Por que quer fazer parte da escolinha?</label>
-      <textarea name="Motivo" rows="4" required></textarea>
-      <button type="submit">Enviar</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Escolinha do Professor Lourival. Todos os direitos reservados.</p>
-  </footer>
-</body>
-</html>
+    <img src="logo.png" alt="Logo Projeto 2 Toke" />
+    <h1>Escolinha de Futebol - Projeto 2 Toke</h
